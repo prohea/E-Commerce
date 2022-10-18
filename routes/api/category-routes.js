@@ -5,12 +5,41 @@ const { Category, Product } = require('../../models');
 
 router.get('/', (req, res) => {
   // find all categories
-  // be sure to include its associated Products
+  try {
+    const categoriesData = await Category.findAll({
+      include: [{ model: Category}],
+      attributes: {
+        // be sure to include its associated Products
+        include: [
+          [
+            sequelize.literal(
+              '(SELECT SUM())'
+            ),
+          ],
+        ],
+      },
+    });
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+  
 });
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
-  // be sure to include its associated Products
+  try {
+    const categoryData = await Category.findByPk(req.params.id, {
+      // be sure to include its associated Products
+      include: [{model:}, {model: }],
+      attributes: [
+        [
+          sequelize.literal(
+            '(SELECT SUM)'
+          ),
+        ],
+      ],
+    },
 });
 
 router.post('/', (req, res) => {
