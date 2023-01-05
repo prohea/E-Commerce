@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { restart } = require("nodemon");
-const { Tag, Product, ProductTag } = require("../../models")
+const { Tag, Product, ProductTag } = require("../../models");
 
 // The `/api/tags` endpoint
 
@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 	try {
 		const tagData = await Tag.findAll();
 		res.status(200).json(tagData);
-	} catch(err) {
+	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
 	}
@@ -24,8 +24,8 @@ router.get("/:id", async (req, res) => {
 			// include: [{ model: Category, through: ProductTag, as: ''}]
 		});
 
-		if(!tagData) {
-			res.status(404).json({ message: "No tag found with this id!"});
+		if (!tagData) {
+			res.status(404).json({ message: "No tag found with this id!" });
 			return;
 		}
 		res.status(200).json(tagData);
@@ -54,7 +54,7 @@ router.put("/:id", async (req, res) => {
 		});
 		res.status(200).json(tagData);
 	} catch (err) {
-		res.status(500).json(err)
+		res.status(500).json(err);
 	}
 });
 
@@ -68,7 +68,7 @@ router.delete("/:id", async (req, res) => {
 		});
 
 		if (!tagData) {
-			res.status(404).json({ message: "No tag found with this id!"});
+			res.status(404).json({ message: "No tag found with this id!" });
 			return;
 		}
 		res.status(200).json(tagData);
