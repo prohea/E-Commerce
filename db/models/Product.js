@@ -1,7 +1,5 @@
-// import important parts of sequelize library
-import { Model, DataTypes } from "sequelize";
-// import our database connection from config.js
-import sequelize from "../config/connection";
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../../config/connection");
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
@@ -53,4 +51,4 @@ Product.init(
 	}
 );
 
-export default Product;
+module.exports = Product;
