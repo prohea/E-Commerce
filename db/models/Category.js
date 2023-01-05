@@ -1,7 +1,6 @@
-const { INTEGER } = require("sequelize");
-const { Model, DataTypes } = require("sequelize");
+import { Model, DataTypes } from "sequelize";
 
-const sequelize = require("../config/connection.js");
+import sequelize from "../config/connection.js";
 
 class Category extends Model {}
 
@@ -28,4 +27,4 @@ Category.init(
 	}
 );
 
-module.exports = Category;
+export default Category;

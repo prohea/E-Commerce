@@ -1,7 +1,7 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require("sequelize");
+import { Model, DataTypes } from "sequelize";
 // import our database connection from config.js
-const sequelize = require("../config/connection");
+import sequelize from "../config/connection";
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
@@ -37,7 +37,7 @@ Product.init(
 		},
 		category_id: {
 			type: DataTypes.INTEGER,
-      allowNull: false,
+			allowNull: false,
 			references: {
 				model: "category",
 				key: "id",
@@ -53,4 +53,4 @@ Product.init(
 	}
 );
 
-module.exports = Product;
+export default Product;
