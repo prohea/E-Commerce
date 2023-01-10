@@ -16,15 +16,16 @@ WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
 THEN I am able to successfully create, update, and delete data in my database
 ```
 # Contributions
-
+Starter Code
 
 # Resources Used
 
 
 # Technologies Used
-MySQL2, Sequelize
+MySQL2, Sequelize, express, node, dotenv, nodemon
 
 # Deployed Project
+https://github.com/prohea/E-Com
 
 # Screenshot
-![E-Commerce]()
+![E-Commerce](./assets/e-commerce.png)
