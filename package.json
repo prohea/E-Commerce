@@ -1,35 +1,31 @@
 {
-  "name": "e-commerce",
-  "version": "1.0.0",
-  "description": "E-Commerce Backend",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prohea/E-Commerce.git"
-  },
-  "author": "prohea",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/prohea/E-Commerce/issues"
-  },
-  "homepage": "https://github.com/prohea/E-Commerce#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "express": "^4.18.2",
-    "mysql2": "^2.3.3",
-    "prettier": "^2.8.1",
-    "sequelize": "^6.28.0"
-  }
+	"name": "e-commerce",
+	"version": "1.0.0",
+	"description": "E-Commerce Backend",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js",
+		"watch": "nodemon server.js",
+		"seed": "node seeds/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/prohea/E-Commerce.git"
+	},
+	"author": "prohea",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/prohea/E-Commerce/issues"
+	},
+	"homepage": "https://github.com/prohea/E-Commerce#readme",
+	"devDependencies": {
+		"nodemon": "^2.0.20"
+	},
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.28.0"
+	}
 }
