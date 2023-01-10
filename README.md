@@ -26,6 +26,7 @@ MySQL2, Sequelize, express, node, dotenv, nodemon
 
 # Deployed Project
 https://github.com/prohea/E-Com
+https://git.heroku.com/ecom-sho.git
 
 # Screenshot
 ![E-Commerce](./assets/e-commerce.png)
