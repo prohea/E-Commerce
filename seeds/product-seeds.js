@@ -1,4 +1,4 @@
-import { Product } from "../../db/models";
+const { Product } = require("../models");
 
 const productData = [
 	{
@@ -35,4 +35,4 @@ const productData = [
 
 const seedProducts = () => Product.bulkCreate(productData);
 
-export default seedProducts;
+module.exports = seedProducts;

@@ -1,6 +1,6 @@
 const router = require("express").Router();
-import { restart } from "nodemon";
-import { Tag, Product, ProductTag } from "../../models";
+const  { restart } = require("nodemon");
+const  { Tag, Product, ProductTag } = require("../../models");
 
 // The `/api/tags` endpoint
 
@@ -77,4 +77,4 @@ router.delete("/:id", async (req, res) => {
 	}
 });
 
-export default router;
+module.exports = router;
